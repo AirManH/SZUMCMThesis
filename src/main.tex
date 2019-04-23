@@ -1,0 +1,99 @@
+\documentclass[a4paper, UTF8]{article}
+\usepackage{ctex}
+\usepackage{geometry} %改变页面格式
+\usepackage{CJKnumb} %中文计数
+\usepackage{titlesec} %section标题格式设置
+\usepackage{setspace}
+\usepackage{titling}
+%---------GLOBAL Settings----------------
+\pagestyle{plain} %取消页眉、编号
+\titleformat{\section}{\Fakeheiti\zihao{4}}{\CJKnumber{\thesection}、}{0em}{}
+\ctexset{
+	autoindent = true % 即便字体大小变化，首段自动缩进相应两个字体字宽的长度
+}
+%-------------MACRO-----------------------------
+%字体设置 (see document of xeCJK for more informations)
+\newCJKfontfamily\Fakesongti{宋体}[AutoFakeBold] %宋体 = SimSun, \Fakesongti = 可以加粗的“伪宋体”
+\newCJKfontfamily\Fakeheiti{黑体}[AutoFakeBold]
+
+%Print a specific table with 3 items
+\newcommand{\MyAuthor}[7]{
+	\centerline{
+        \Fakesongti \zihao{5}
+        #1 \quad
+        #2 \quad #3 \quad
+        #4 \quad #5 \quad
+        #6 \quad #7
+    }
+}
+
+\begin{document}
+
+\newgeometry{top=2.54cm, bottom=2.54cm, left=3.17cm, right=3.17cm}
+
+%------------封面------------------------
+	\clearpage\thispagestyle{empty}\addtocounter{page}{-1}
+
+    \vspace*{2.2cm}
+
+    \centerline{\Fakesongti \zihao{1} \bfseries 2019第十二届“深大杯”数学建模竞赛}
+
+    \vspace*{3.05cm}
+
+    \MyAuthor{某某学院}{姓名}{某某}{学号}{0000000000}{电话}{11100000000}
+    
+    \MyAuthor{某某学院}{姓名}{某某}{学号}{0000000000}{电话}{11100000000}
+    
+    \MyAuthor{某某学院}{姓名}{某某}{学号}{0000000000}{电话}{11100000000}
+	
+	\clearpage
+%------------正文部分------------------------
+	
+	\newpage
+    
+    \phantom{\Fakesongti \zihao{4} 无}
+
+    \centerline{\Fakeheiti \zihao{3} 标题}
+
+    \phantom{\Fakesongti \zihao{5} 无}
+
+    \centerline{\Fakeheiti \zihao{4} \bfseries 摘要}
+
+    \Fakesongti \zihao{-4}
+
+    将你们在文章中的主要内容作一个简单陈述。字数大概在200～300字之间，
+    要求突出重点，说出你们解决问题的途径和简单的结论。
+    
+    \phantom{无 \\ 无}
+    
+    {\noindent 关键词：无无无\phantom{无无}无无无无}
+
+    \phantom{无 \\ 无}
+
+    \Fakesongti \zihao{-4}
+
+	\section{问题的提出}
+
+        将问题用你们的理解重新进行表述
+    
+    \section{问题的分析}
+    
+        对问题进行分析，包括你们查阅的文献中对此问题或近似问题的解决方法的综述，
+        还可能包括定性分析和定量分析，并讨论对此问题你们拟采用的方法。
+	
+    \section{模型假设}
+
+        建立数学模型解决问题都是有一定条件的，对此，经过你们的分析，作出你们针对此问题的合理的假设。
+	
+	\section{模型的建立与求解}
+    
+        在这里写出你们对此问题建立数学模型并求解的过程，需要分成若干个校标题，
+        将你们建模的过程和求解的过程详细但不啰嗦地说清楚，如果用的是已经存在的某个数学模型，
+        则需要将模型的基本知识做个简单介绍。
+
+    \section{模型评价}
+    
+        针对你们对此问题建立模型并计算得到的相关结论进行讨论，讨论你们得到的数值是否合理，
+        模型是否合理，在什么地方可能改进等等。
+	
+\end{document}

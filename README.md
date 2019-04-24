@@ -7,6 +7,8 @@
 ## 使用方法
 
 * 请使用XeLaTeX作为编译器
+* 请使用TeX Live套装 而不要使用 CTeX套装
+* 有任何问题请在[Issues](https://github.com/AirManH/SZUMCMThesis/issues)中提出
 
 ## 预览
 
@@ -16,7 +18,7 @@
 ## 文件说明
 
     ├──img/    预览图目录
-    ├──refer/    参考文件所在目录
+    ├──ref/    参考文件所在目录
     └──src/
        └──main.tex    LaTeX模板
 
